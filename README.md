@@ -16,4 +16,4 @@ I utilized SQL to extract and analyze sales data for a motorcycle parts company,
 FROM sales <br>
 WHERE client_type = 'Wholesale' <br>
 GROUP BY product_line, warehouse, month <br>
-ORDER BY product_line, month, net_revenue DESC <br>
+ORDER BY product_line, month, net_revenue DESC; <br>
