@@ -4,10 +4,10 @@ I utilized SQL to extract and analyze sales data for a motorcycle parts company,
 
 **SQL QUERY** <br>
 
-SELECT  product_line, <br> {
- CASE WHEN EXTRACT('month' from date) = 6 THEN 'June' <br>
-          WHEN EXTRACT('month' from date) = 7 THEN 'July' <br>
-          WHEN EXTRACT('month' from date) = 8 THEN 'August' <br>
+SELECT  product_line, <br> 
+   &nbsp  CASE WHEN EXTRACT('month' from date) = 6 THEN 'June' <br>
+&nbsp    WHEN EXTRACT('month' from date) = 7 THEN 'July' <br>
+      &nbsp    WHEN EXTRACT('month' from date) = 8 THEN 'August' <br>
           END as month, <br>
           warehouse, <br>
 	  SUM(total) - SUM(payment_fee) AS net_revenue <br> }
