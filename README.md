@@ -5,12 +5,13 @@ I utilized SQL to extract and analyze sales data for a motorcycle parts company,
 **SQL QUERY** <br>
 
 SELECT  product_line, <br> 
-   <div style="CASE WHEN EXTRACT('month' from date) = 6 THEN 'June'" ></div> <br>
-<&nbsp>    WHEN EXTRACT('month' from date) = 7 THEN 'July' <br>
-     <&nbsp>    WHEN EXTRACT('month' from date) = 8 THEN 'August' <br>
+ <pre> CASE WHEN EXTRACT('month' from date) = 6 THEN 'June' <br>
+ WHEN EXTRACT('month' from date) = 7 THEN 'July' <br>
+ WHEN EXTRACT('month' from date) = 8 THEN 'August' <br>
           END as month, <br>
           warehouse, <br>
-	  SUM(total) - SUM(payment_fee) AS net_revenue <br> }
+	  SUM(total) - SUM(payment_fee) AS net_revenue <br> 
+
 FROM sales <br>
 WHERE client_type = 'Wholesale' <br>
 GROUP BY product_line, warehouse, month <br>
